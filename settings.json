@@ -1,0 +1,109 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # ── SITE SETTINGS ──────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - label: "General Settings"
+        name: "general"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Business Name", name: "business_name", widget: "string", default: "My Moments" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Fine Art Photography" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Location / City", name: "location", widget: "string" }
+          - { label: "Instagram Handle", name: "instagram", widget: "string" }
+          - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
+
+  # ── HERO ───────────────────────────────────────────────────
+  - name: "hero"
+    label: "🏠 Hero Section"
+    files:
+      - label: "Hero Content"
+        name: "hero"
+        file: "_data/hero.json"
+        fields:
+          - { label: "Eyebrow Text", name: "eyebrow", widget: "string", default: "Fine Art Photography" }
+          - { label: "Main Title", name: "title", widget: "string", default: "My Moments" }
+          - { label: "Subtitle / Description", name: "subtitle", widget: "text" }
+          - { label: "Primary Button Text", name: "btn_primary", widget: "string", default: "View Portfolio" }
+          - { label: "Secondary Button Text", name: "btn_secondary", widget: "string", default: "Book a Session" }
+
+  # ── ABOUT ──────────────────────────────────────────────────
+  - name: "about"
+    label: "👤 About Section"
+    files:
+      - label: "About Content"
+        name: "about"
+        file: "_data/about.json"
+        fields:
+          - { label: "Photographer Photo", name: "photo", widget: "image", required: false }
+          - { label: "Pull Quote", name: "quote", widget: "string" }
+          - { label: "Paragraph 1", name: "para1", widget: "text" }
+          - { label: "Paragraph 2", name: "para2", widget: "text" }
+          - { label: "Paragraph 3", name: "para3", widget: "text" }
+          - { label: "Signature", name: "signature", widget: "string", default: "— My Moments Photography" }
+
+  # ── SERVICES ───────────────────────────────────────────────
+  - name: "services"
+    label: "🛎️ Services"
+    folder: "_data/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Service Name", name: "title", widget: "string" }
+      - { label: "Icon (emoji)", name: "icon", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Starting Price", name: "price", widget: "string", hint: "e.g. From $195" }
+      - { label: "Sort Order", name: "order", widget: "number", default: 1 }
+
+  # ── PRICING ────────────────────────────────────────────────
+  - name: "pricing"
+    label: "💰 Pricing Packages"
+    folder: "_data/pricing"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Package Name", name: "title", widget: "string" }
+      - { label: "Price (numbers only)", name: "price", widget: "string" }
+      - { label: "Subtitle / Ideal For", name: "subtitle", widget: "string" }
+      - { label: "Featured (highlight this package)", name: "featured", widget: "boolean", default: false }
+      - label: "What's Included"
+        name: "features"
+        widget: "list"
+        field: { label: "Feature", name: "item", widget: "string" }
+      - { label: "Sort Order", name: "order", widget: "number", default: 1 }
+
+  # ── PORTFOLIO ──────────────────────────────────────────────
+  - name: "portfolio"
+    label: "🖼️ Portfolio Images"
+    folder: "_data/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Portraits", "Families", "Real Estate", "Commercial"]
+      - { label: "Caption / Subtitle", name: "caption", widget: "string", required: false }
+      - { label: "Sort Order", name: "order", widget: "number", default: 1 }
+
+  # ── TESTIMONIALS ───────────────────────────────────────────
+  - name: "testimonials"
+    label: "💬 Testimonials"
+    folder: "_data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Client Name & Session", name: "author", widget: "string", hint: "e.g. Sarah M., Family Session" }
+      - { label: "Testimonial Text", name: "text", widget: "text" }
+      - { label: "Sort Order", name: "order", widget: "number", default: 1 }

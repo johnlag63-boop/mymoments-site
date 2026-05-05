@@ -1,0 +1,64 @@
+# My Moments Photography Website
+
+## 🚀 How to Launch in 5 Steps
+
+### Step 1 — Create a GitHub Repository
+1. Go to **github.com** and sign in (or create a free account)
+2. Click **"New repository"**
+3. Name it `mymoments-site`, set it to **Public**
+4. Click **"Create repository"**
+
+### Step 2 — Upload Your Files
+1. On your new repo page, click **"uploading an existing file"**
+2. Drag the entire contents of this folder into the upload area:
+   - `index.html`
+   - `netlify.toml`
+   - `admin/` folder
+   - `_data/` folder
+   - `images/` folder
+3. Click **"Commit changes"**
+
+### Step 3 — Deploy to Netlify
+1. Go to **netlify.com** and sign up with your GitHub account
+2. Click **"Add new site" → "Import an existing project"**
+3. Choose **GitHub** and select your `mymoments-site` repository
+4. Leave all build settings blank (no build command needed)
+5. Click **"Deploy site"** — your site will be live in ~30 seconds!
+
+### Step 4 — Enable the CMS
+1. In Netlify, go to **Site Settings → Identity**
+2. Click **"Enable Identity"**
+3. Under **Registration**, set to **"Invite only"**
+4. Scroll to **"Git Gateway"** and click **"Enable Git Gateway"**
+5. Go to **Identity tab** → **"Invite users"** → enter your email
+
+### Step 5 — Log into Your CMS Editor
+1. Visit `https://your-site-name.netlify.app/admin`
+2. Accept the invite from your email
+3. You can now edit everything from a friendly dashboard!
+
+---
+
+## 📝 What You Can Edit in the CMS
+
+| Section | What's Editable |
+|---------|----------------|
+| ⚙️ Site Settings | Business name, email, phone, Instagram |
+| 🏠 Hero | Eyebrow text, subtitle, button labels |
+| 👤 About | Your photo, quote, paragraphs, signature |
+| 🛎️ Services | Name, icon, description, price for each service |
+| 💰 Pricing | Package names, prices, features, featured toggle |
+| 🖼️ Portfolio | Upload photos, set category, add captions |
+| 💬 Testimonials | Client name, testimonial text |
+
+---
+
+## 🌐 Custom Domain (Optional)
+1. Buy a domain at **namecheap.com** (e.g. `mymoments.photo` ~$12/yr)
+2. In Netlify → **Domain settings → Add custom domain**
+3. Follow Netlify's instructions to point your domain — takes ~10 minutes
+
+---
+
+## ❓ Need Help?
+Ask Claude at claude.ai to help you make any design changes!
